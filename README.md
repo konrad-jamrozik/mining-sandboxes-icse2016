@@ -4,6 +4,6 @@ A repository containing input and output data from the ICSE 2016 "Mining Sandbox
 
 Contact: jamrozik@st.cs.uni-saarland.de
 
-* [Website of the tool introduced in the paper, BoxMate](www.boxmate.org)
+* [Website of the tool introduced in the paper, BoxMate](http://www.boxmate.org)
 * ["Mining Sandboxes" at the ACM Digital Library](http://dl.acm.org/citation.cfm?id=2884782)
 * [Download the publication](http://www.boxmate.org/files/boxmate-preprint.pdf) 
