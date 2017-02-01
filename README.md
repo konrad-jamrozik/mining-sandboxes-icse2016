@@ -1,2 +1,2 @@
-# mining-sandboxes-icse2016-reproduction
-A repository containing instructions and data on how to reproduce as faithfully as possible the results from the ICSE 2016 "Mining Sandboxes" paper.
+# mining-sandboxes-icse2016
+A repository containing input and output data from the ICSE 2016 "Mining Sandboxes" paper, plus instructions on how to reproduce the results as faithfully as possible.
