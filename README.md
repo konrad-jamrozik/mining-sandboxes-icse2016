@@ -12,7 +12,10 @@ Useful links:
 * [Download the publication](http://www.boxmate.org/files/boxmate-preprint.pdf)
 * [GitHub repository with source code of the publication](https://github.com/konrad-jamrozik/droidmate)
 
+## Publication data
 
-## Figure 2 data
+All the experiments results data discussed in the publication is present in this repository. Sections below give the exact relationships between the figures in the publication and the data. All saturation charts on figures in the publication have been generated using [PGFPlots](http://pgfplots.sourceforge.net/). 
 
-The chart was generated using pgfplots from the file [saturation_chart-3.5h-com.snapchat.android.txt](results/saturation charts data snapchat 4.1.07 vs 5.0.34.6 3.5h/saturation_chart-3.5h-com.snapchat.android.txt), third column, having header `droidmate-run:com.snapchat.android-4.1.07`.
+### Figure 2 data
+
+The chart was generated from the file [saturation_chart-3.5h-com.snapchat.android.txt](results/saturation charts data snapchat 4.1.07 vs 5.0.34.6 3.5h/saturation_chart-3.5h-com.snapchat.android.txt), third column, having header `droidmate-run:com.snapchat.android-4.1.07`.
