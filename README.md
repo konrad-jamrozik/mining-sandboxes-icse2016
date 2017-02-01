@@ -15,4 +15,4 @@ Useful links:
 
 ## Figure 2 data
 
-The chart was generated using pgfplots from the file [saturation_chart-3.5h-com.snapchat.android.txt](results\saturation charts data snapchat 4.1.07 vs 5.0.34.6 3.5h\saturation_chart-3.5h-com.snapchat.android.txt), third column, having header `droidmate-run:com.snapchat.android-4.1.07`.
+The chart was generated using pgfplots from the file [saturation_chart-3.5h-com.snapchat.android.txt](results/saturation charts data snapchat 4.1.07 vs 5.0.34.6 3.5h\saturation_chart-3.5h-com.snapchat.android.txt), third column, having header `droidmate-run:com.snapchat.android-4.1.07`.
