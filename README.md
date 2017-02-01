@@ -2,7 +2,7 @@
 
 A repository containing input and output data from the ICSE 2016 "Mining Sandboxes" paper, as well as instructions on how to reproduce the results as faithfully as possible.
 
-Note: this repository **does not contain tool source code**, only data. To get sources, please see the link below.
+Note: this repository **does not contain tool source code**, only data. To get sources, please see the relevant link below.
 
 Contact: jamrozik@st.cs.uni-saarland.de
 
