@@ -31,3 +31,7 @@ The data is interpretation of the last two tables (starting at lines 96 and 115)
 ### Figure 5 data
 
 The charts have been generated from files in the [saturation charts data 12 apps 2h](results/saturation charts data 12 apps 2h) directory.
+
+### Figure 8 data
+
+The charts have been generated from files in the [saturation charts data 12 apps 2h per event](results/saturation charts data 12 apps 2h per event) directory.
