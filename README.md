@@ -22,7 +22,7 @@ The chart was generated from the file [saturation_chart-3.5h-com.snapchat.androi
 
 ### Figure 3 data
 
-The data is interpretation of the last two tables (starting at lines 96 and 115) from the file TODO. Note that the interpretation required additional manual effort to account for the imprecision of the obtained logs. What we did manually:
+The data is interpretation of the last two tables (starting at lines 96 and 115) from the file [summary-com.snapchat.android.txt](results/summaries for snapchat 4.1.07 vs 5.0.34.6 comparison/summary-com.snapchat.android.txt). Note that the interpretation required additional manual effort to account for the imprecision of the obtained logs. What we did manually:
 
 * Some API calls were classified as `background` because they originated from a background thread. However, the thread was started because of an user action that is described in the figure. 
 * Noisy API calls have been  collapsed, like multiple calls to `getLastKnownLocation()`.
