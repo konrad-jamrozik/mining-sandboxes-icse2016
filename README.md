@@ -27,3 +27,7 @@ The data is interpretation of the last two tables (starting at lines 96 and 115)
 * Some API calls were classified as `background` because they originated from a background thread. However, the thread was started because of an user action that is described in the figure. 
 * Noisy API calls have been  collapsed, like multiple calls to `getLastKnownLocation()`.
 * Finally, we manually accounted for imprecise API call log time stamps. The imprecision was caused by reading the API call logs from logcat, which output the logs with various delays, possibly making them being classified to wrong user actions.
+
+### Figure 5 data
+
+The chart have been generated from the files in [saturation charts data 12 apps 2h](results/saturation charts data 12 apps 2h) directory.
