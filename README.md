@@ -38,7 +38,7 @@ The charts were generated from files in the [saturation charts data 12 apps 2h](
 
 ### Table 2 data
 
-The data is interpretation of the tables from files in the [summaries for 18 uia tcs vs 2h runs (3.5h for snapchat)](results/summaries for 18 uia tcs vs 2h runs (3.5h for snapchat)) directory. The same kind of manual interpretation procedure has been applied as in case of Figure 2 data. In addition, if consequitve sequence of previously unknown API calls has been observed, we assume user would be present with only one confirmation, as counted on the table.
+The data is interpretation of the tables from files in the [summaries for 18 uia tcs vs 2h runs (3.5h for snapchat)](results/summaries for 18 uia tcs vs 2h runs (3.5h for snapchat)) directory. The same kind of manual interpretation procedure has been applied as in case of [Figure 3 data](#figure-3-data). In addition, if consequitve sequence of previously unknown API calls has been observed, we assume user would be present with only one confirmation, as counted on the table.
 
 ### Figure 7 data
 
@@ -50,8 +50,8 @@ The charts were generated from files in the [saturation charts data 12 apps 2h p
 
 ### Figure 9 data
 
-The chart was generated from the file [saturation_chart-3.5h-com.snapchat.android.txt](results/saturation charts data snapchat 4.1.07 vs 5.0.34.6 3.5h/saturation_chart-3.5h-com.snapchat.android.txt), all columns. The red line, i.e. snapchat 5.0.34.6, is based on first and second column. The blue line, i.e. snapchat 4.1.07, is based on first and third column. Note that the blue line is equivalent to the blue line on Figure 2.
+The chart was generated from the file [saturation_chart-3.5h-com.snapchat.android.txt](results/saturation charts data snapchat 4.1.07 vs 5.0.34.6 3.5h/saturation_chart-3.5h-com.snapchat.android.txt), all columns. The red line, i.e. snapchat 5.0.34.6, is based on first and second column. The blue line, i.e. snapchat 4.1.07, is based on first and third column. Note that the blue line is equivalent to the blue line on [Figure 2](#figure-2-data).
 
 ### Section 6 detailed analysis
 
-The detailed analysis of API calls difference between Snapchat 4.1.07 and Snapchat 5.0.34.6 done in section 6. ASSESSING SANDBOXES is done based on the data given in [summary-com.snapchat.android.txt](results/summaries for snapchat 4.1.07 vs 5.0.34.6 comparison/summary-com.snapchat.android.txt). The same kind of manual interpretation procedure has been applied as in case of Figure 2 data. 
+The detailed analysis of API calls difference between Snapchat 4.1.07 and Snapchat 5.0.34.6 done in section 6. ASSESSING SANDBOXES is done based on the data given in [summary-com.snapchat.android.txt](results/summaries for snapchat 4.1.07 vs 5.0.34.6 comparison/summary-com.snapchat.android.txt). The same kind of manual interpretation procedure has been applied as in case of [Figure 3 data](#figure-3-data). 
