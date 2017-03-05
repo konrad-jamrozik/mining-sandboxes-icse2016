@@ -16,6 +16,10 @@ Useful links:
 
 All the experiments results data discussed in the publication is present in this repository. Sections below give the exact relationships between the figures in the publication and the data. All saturation charts on figures in the publication have been generated using [PGFPlots](http://pgfplots.sourceforge.net/). 
 
+### Full API list
+
+The full list of monitored AppGuard API calls is given in [AppGuard_apis_list.txt](AppGuard_apis_list.txt).
+
 ### Figure 2 data
 
 The chart was generated from the file [saturation_chart-3.5h-com.snapchat.android.txt](results/saturation charts data snapchat 4.1.07 vs 5.0.34.6 3.5h/saturation_chart-3.5h-com.snapchat.android.txt), first and third columns. The third column has header `droidmate-run:com.snapchat.android-4.1.07`.
