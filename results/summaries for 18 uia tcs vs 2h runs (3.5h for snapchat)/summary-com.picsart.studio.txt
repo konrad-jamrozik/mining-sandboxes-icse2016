@@ -1,0 +1,172 @@
+==============================================================
+use-case:addEffect:com.picsart.studio
+==============================================================
+
+// Manually-written description of the actions of the use case:
+//
+//  1. Reset the app by calling Package Manager through adb (Android Debug Bridge).
+//  2. Click the 'Close' button to close the 'Stretch tool' popup.
+//  3. Click the 'Effect' button to add an effect to a photo.
+//  4. Click the 'Gallery' button to open a gallery with existing photos.
+//  5. Click the first photo in the 'Recent' list of photos.
+//  6. Click the 'twilight' effect button.
+//  7. Click the 'Apply' button to apply the 'twilight' effect.
+//  8. Click the 'Save' button to save the modified photo.
+//  9. Click the 'Save to SD Card' button.
+// 10. Click the 'OK' button to confirm the save of the modified photo to SD card.
+// 11. Terminate the exploration.
+
+Total run time:         1m  3s
+Total actions count:   11 (including the final action terminating exploration)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 10
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     | Use case       API signature
+   0m  9s    1 |    0m 11s    1 TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.picsart.studio.provider/user.update
+   0m 10s    1 |    0m 11s    1 TId:    1 android.location.LocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)
+   0m 10s    1 |    0m 11s    1 TId:    1 android.location.LocationManager: boolean isProviderEnabled(java.lang.String)
+   0m 10s    1 |    0m 11s    1 TId: 2714 java.net.URL: java.net.URLConnection openConnection()
+   0m 10s    1 |    0m 11s    1 TId: 2713 java.net.Socket: void <init>
+   0m 10s    1 |    0m 12s    1 TId:    1 android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)
+   0m 11s    1 |    0m 12s    1 TId: 2714 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.picsart.studio.provider/notifications
+   0m 11s    1 |    0m 13s    1 TId: 2713 android.content.ContentResolver: int bulkInsert(android.net.Uri,android.content.ContentValues[]) uri: content://com.picsart.studio.provider/notifications
+         None! |    0m 29s    6 TId: 2710 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.android.providers.media.documents/document/image%3A3836
+         None! |    0m 29s    6 TId: 2710 android.content.ContentResolver: java.io.InputStream openInputStream(android.net.Uri) uri: content://com.android.providers.media.documents/document/image%3A3836
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 17
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     | Use case       Event                                                        API signature
+   0m  9s    1 |    0m 11s    1 <reset>                                                      TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.picsart.studio.provider/user.update
+   0m 10s    1 |    0m 11s    1 <reset>                                                      TId:    1 android.location.LocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)
+   0m 10s    1 |    0m 11s    1 <reset>                                                      TId:    1 android.location.LocationManager: boolean isProviderEnabled(java.lang.String)
+   0m 10s    1 |    0m 11s    1 <reset>                                                      TId: 2714 java.net.URL: java.net.URLConnection openConnection()
+   0m 10s    1 |    0m 11s    1 <reset>                                                      TId: 2713 java.net.Socket: void <init>
+   0m 10s    1 |    0m 12s    1 <reset>                                                      TId:    1 android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)
+   0m 11s    1 |    0m 12s    1 <reset>                                                      TId: 2714 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.picsart.studio.provider/notifications
+   0m 11s    1 |    0m 13s    1 <reset>                                                      TId: 2713 android.content.ContentResolver: int bulkInsert(android.net.Uri,android.content.ContentValues[]) uri: content://com.picsart.studio.provider/notifications
+  18m 59s  295 |    0m 16s    3 click:[res:id/start_fx_id]                                   TId:    1 android.location.LocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)
+   0m 15s    3 |    0m 16s    3 background                                                   TId: 2693 java.net.URL: java.net.URLConnection openConnection()
+   0m 15s    3 |    0m 16s    3 background                                                   TId: 2693 java.net.Socket: void <init>
+   0m 15s    3 |    0m 17s    3 background                                                   TId: 2694 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.picsart.studio.provider/notifications
+         None! |    0m 23s    4 click:[res:id/galleryButtonId]                               TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.picsart.studio.provider/user.update
+         None! |    0m 23s    4 background                                                   TId: 2694 android.content.ContentResolver: int bulkInsert(android.net.Uri,android.content.ContentValues[]) uri: content://com.picsart.studio.provider/notifications
+         None! |    0m 29s    6 background                                                   TId: 2710 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.android.providers.media.documents/document/image%3A3836
+         None! |    0m 29s    6 background                                                   TId: 2710 android.content.ContentResolver: java.io.InputStream openInputStream(android.net.Uri) uri: content://com.android.providers.media.documents/document/image%3A3836
+   0m 23s    6 |    0m 29s    6 unlabeled                                                    TId:    1 android.location.LocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)
+
+
+==============================================================
+droidmate-run:com.picsart.studio
+==============================================================
+
+Total run time:       120m 25s
+Total actions count: 1910 (including the final action terminating exploration)
+Total resets count:   107 (including the initial action)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 13
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     API signature
+   0m  9s    1 TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.picsart.studio.provider/user.update
+   0m 10s    1 TId:    1 android.location.LocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)
+   0m 10s    1 TId:    1 android.location.LocationManager: boolean isProviderEnabled(java.lang.String)
+   0m 10s    1 TId:  214 java.net.URL: java.net.URLConnection openConnection()
+   0m 10s    1 TId:  215 java.net.Socket: void <init>
+   0m 10s    1 TId:    1 android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)
+   0m 11s    1 TId:  194 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.picsart.studio.provider/notifications
+   0m 11s    1 TId:  214 android.content.ContentResolver: int bulkInsert(android.net.Uri,android.content.ContentValues[]) uri: content://com.picsart.studio.provider/notifications
+   2m 15s   30 TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.facebook.katana.provider.AttributionIdProvider
+   2m 54s   39 TId:  222 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://com.picsart.studio.provider/notifications
+   3m  3s   43 TId:  244 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.picsart.studio.provider/notifications
+   8m 36s  125 TId:    1 android.hardware.Camera: android.hardware.Camera open()
+   8m 36s  125 TId:    1 android.hardware.Camera: android.hardware.Camera open(int)
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 69
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     Event                                                        API signature
+   0m  9s    1 <reset>                                                      TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.picsart.studio.provider/user.update
+   0m 10s    1 <reset>                                                      TId:    1 android.location.LocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)
+   0m 10s    1 <reset>                                                      TId:    1 android.location.LocationManager: boolean isProviderEnabled(java.lang.String)
+   0m 10s    1 <reset>                                                      TId:  214 java.net.URL: java.net.URLConnection openConnection()
+   0m 10s    1 <reset>                                                      TId:  215 java.net.Socket: void <init>
+   0m 10s    1 <reset>                                                      TId:    1 android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)
+   0m 11s    1 <reset>                                                      TId:  194 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.picsart.studio.provider/notifications
+   0m 11s    1 <reset>                                                      TId:  214 android.content.ContentResolver: int bulkInsert(android.net.Uri,android.content.ContentValues[]) uri: content://com.picsart.studio.provider/notifications
+   0m 15s    3 click:[res:id/whats_new_closeButton]                         TId:    1 android.location.LocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)
+   0m 15s    3 background                                                   TId:  214 java.net.URL: java.net.URLConnection openConnection()
+   0m 15s    3 background                                                   TId:  214 java.net.Socket: void <init>
+   0m 15s    3 background                                                   TId:  194 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.picsart.studio.provider/notifications
+   0m 46s    8 click:[res:id/start_camera_id]                               TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.picsart.studio.provider/user.update
+   0m 57s   11 click:[res:id/save_photo_btn]                                TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.picsart.studio.provider/user.update
+   1m 51s   19 click:[res:id/start_shop_id]                                 TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.picsart.studio.provider/user.update
+   1m 56s   21 click:[res:id/shop_login_button]                             TId:    1 android.location.LocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)
+   1m 56s   21 click:[res:id/shop_login_button]                             TId:    1 android.location.LocationManager: boolean isProviderEnabled(java.lang.String)
+   1m 56s   21 click:[res:id/shop_login_button]                             TId:    1 android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)
+   2m  8s   27 click:[res:id/profile_signup_btn]                            TId:    1 android.location.LocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)
+   2m  8s   27 click:[res:id/profile_signup_btn]                            TId:    1 android.location.LocationManager: boolean isProviderEnabled(java.lang.String)
+   2m  8s   27 click:[res:id/profile_signup_btn]                            TId:    1 android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)
+   2m 15s   30 unlabeled                                                    TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.facebook.katana.provider.AttributionIdProvider
+   2m 25s   33 unlabeled                                                    TId:    1 android.location.LocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)
+   2m 54s   39 background                                                   TId:  222 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://com.picsart.studio.provider/notifications
+   3m  3s   43 background                                                   TId:  244 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.picsart.studio.provider/notifications
+   3m  5s   44 click:[dsc:Notifications, Navigate up]                       TId:    1 android.location.LocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)
+   3m  9s   46 click:[res:id/start_edit_id]                                 TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.picsart.studio.provider/user.update
+   3m 14s   48 click:[res:id/picsInGalleryLayoutId]                         TId:    1 android.location.LocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)
+   3m 14s   48 click:[res:id/picsInGalleryLayoutId]                         TId:    1 android.location.LocationManager: boolean isProviderEnabled(java.lang.String)
+   3m 14s   48 click:[res:id/picsInGalleryLayoutId]                         TId:    1 android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)
+   3m 50s   54 click:[res:id/start_poplar_photo_id]                         TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.picsart.studio.provider/user.update
+   3m 52s   55 click:[dsc:PicsArt, Navigate up]                             TId:    1 android.location.LocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)
+   5m  0s   74 l-click:[dsc:More]                                           TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.picsart.studio.provider/user.update
+   7m  6s  106 click:[res:id/shop_item_buy_btn]                             TId:    1 android.location.LocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)
+   7m  6s  106 click:[res:id/shop_item_buy_btn]                             TId:    1 android.location.LocationManager: boolean isProviderEnabled(java.lang.String)
+   7m  6s  106 click:[res:id/shop_item_buy_btn]                             TId:    1 android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)
+   8m 36s  125 unlabeled                                                    TId:    1 android.hardware.Camera: android.hardware.Camera open()
+   8m 36s  125 unlabeled                                                    TId:    1 android.hardware.Camera: android.hardware.Camera open(int)
+   8m 48s  130 unlabeled                                                    TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.picsart.studio.provider/user.update
+   9m 21s  136 click:[dsc:Shop, Navigate home]                              TId:    1 android.location.LocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)
+  11m  0s  166 click:[dsc:Shop, Navigate up]                                TId:    1 android.location.LocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)
+  12m 10s  184 click:[res:id/custom_effects]                                TId:    1 android.hardware.Camera: android.hardware.Camera open()
+  12m 10s  184 click:[res:id/custom_effects]                                TId:    1 android.hardware.Camera: android.hardware.Camera open(int)
+  13m 20s  203 click:[res:id/start_collage_id]                              TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.picsart.studio.provider/user.update
+  14m  5s  215 click:[res:id/shop_item_buy_install_button]                  TId:    1 android.location.LocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)
+  14m  5s  215 click:[res:id/shop_item_buy_install_button]                  TId:    1 android.location.LocationManager: boolean isProviderEnabled(java.lang.String)
+  14m  5s  215 click:[res:id/shop_item_buy_install_button]                  TId:    1 android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)
+  14m  8s  216 click:[res:id/si_ui_socialin_sign_fb]                        TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.facebook.katana.provider.AttributionIdProvider
+  16m 10s  252 click:[res:id/delete_photo_btn]                              TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.picsart.studio.provider/user.update
+  16m 46s  262 click:[dsc:More]                                             TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.picsart.studio.provider/user.update
+  16m 49s  263 click:[dsc:Refresh]                                          TId:    1 android.location.LocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)
+  18m 59s  295 click:[res:id/start_fx_id]                                   TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.picsart.studio.provider/user.update
+  23m 41s  367 click:[dsc:Search]                                           TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.picsart.studio.provider/user.update
+  23m 53s  370 click:[res:id/picasa_item_image_layout]                      TId:    1 android.location.LocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)
+  23m 57s  371 click:[res:id/menu_item_close]                               TId:    1 android.location.LocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)
+  26m 27s  413 click:[res:id/whats_new_videoIcon]                           TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.picsart.studio.provider/user.update
+  29m 27s  459 click:[dsc:Refresh]                                          TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.picsart.studio.provider/user.update
+  31m  7s  489 unlabeled                                                    TId:    1 android.location.LocationManager: boolean isProviderEnabled(java.lang.String)
+  31m  7s  489 unlabeled                                                    TId:    1 android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)
+  33m 45s  532 l-click:[dsc:Notifications]                                  TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.picsart.studio.provider/user.update
+  46m 40s  747 click:[res:android:id/text1]                                 TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.facebook.katana.provider.AttributionIdProvider
+  56m  7s  877 click:[res:id/info_dialog_right_button_id]                   TId:    1 android.location.LocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)
+  60m 18s  943 click:[dsc:Navigate up]                                      TId:    1 android.location.LocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)
+  61m 12s  961 click:[txt:PicsArt]                                          TId:    1 android.location.LocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)
+  61m 12s  961 click:[txt:PicsArt]                                          TId:    1 android.location.LocationManager: boolean isProviderEnabled(java.lang.String)
+  61m 12s  961 click:[txt:PicsArt]                                          TId:    1 android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)
+  66m 58s 1048 click:[res:id/start_draw_id]                                 TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.picsart.studio.provider/user.update
+  67m 37s 1057 click:[res:id/whats_new_closeButton]                         TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.picsart.studio.provider/user.update
+ 110m 40s 1757 click:[dsc:Notifications]                                    TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.picsart.studio.provider/user.update
+
+

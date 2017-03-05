@@ -1,0 +1,132 @@
+==============================================================
+use-case:findBySearch:com.ebay.mobile
+==============================================================
+
+// Manually-written description of the actions of the use case:
+//
+//  1. Reset the app by calling Package Manager through adb (Android Debug Bridge).
+//  2. Click the 'Agree' button to agree to terms of use.
+//  3. Click the 'Sign in' button.
+//  4. Enter 'debugg7@gmail.com' as user name for sign-in.
+//  5. Enter 'qwerfdsa1' as password for sign-in.
+//  6. Click the 'Sign-in' button to finally sign-in.
+//  7. Enter 'pillow' in the search field to search for a pillow on eBay.
+//  8. Confirm search.
+//  9. Click on the first search result to view the item.
+// 10. Terminate the exploration.
+
+Total run time:         0m 52s
+Total actions count:   10 (including the final action terminating exploration)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 13
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     | Use case       API signature
+   0m  6s    1 |    0m  8s    1 TId:    1 android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)
+   0m  8s    1 |    0m  8s    1 TId: 2315 java.net.Socket: void <init>
+   0m  9s    1 |    0m  9s    1 TId: 2326 java.net.URL: java.net.URLConnection openConnection()
+   0m 10s    1 |    0m 10s    2 TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+   0m 10s    1 |    0m 10s    2 TId:    1 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+   0m 10s    1 |    0m 10s    2 TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+         None! |    0m 29s    7 TId: 2350 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+         None! |    0m 30s    7 TId:    1 android.os.PowerManager$WakeLock: void acquire()
+         None! |    0m 30s    7 TId: 2315 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.ebay.mobile.providers.itemcacheprovider/saved_search
+         None! |    0m 30s    7 TId: 2351 android.os.PowerManager$WakeLock: void release(int)
+         None! |    0m 30s    7 TId: 2348 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.ebay.mobile.providers.itemcacheprovider/local_notifications
+         None! |    0m 30s    7 TId: 2363 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.ebay.mobile.providers.itemcacheprovider/local_notifications
+         None! |    0m 32s    7 TId: 2350 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.ebay.mobile.providers.itemcacheprovider/saved_search
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 21
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     | Use case       Event                                                        API signature
+   0m  6s    1 |    0m  8s    1 <reset>                                                      TId:    1 android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)
+   0m  8s    1 |    0m  8s    1 <reset>                                                      TId: 2315 java.net.Socket: void <init>
+   0m  9s    1 |    0m  9s    1 <reset>                                                      TId: 2326 java.net.URL: java.net.URLConnection openConnection()
+         None! |    0m 10s    2 click:[res:id/accept_btn]                                    TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+   0m 31s    4 |    0m 10s    2 background                                                   TId: 2326 java.net.URL: java.net.URLConnection openConnection()
+         None! |    0m 10s    2 click:[res:id/accept_btn]                                    TId:    1 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+         None! |    0m 10s    2 click:[res:id/accept_btn]                                    TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+   0m 30s    4 |    0m 12s    3 background                                                   TId: 2333 java.net.Socket: void <init>
+         None! |    0m 29s    7 enterText:[res:id/home_search_bar]                           TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+         None! |    0m 29s    7 enterText:[res:id/home_search_bar]                           TId:    1 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+         None! |    0m 29s    7 background                                                   TId: 2350 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+         None! |    0m 30s    7 enterText:[res:id/home_search_bar]                           TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+         None! |    0m 30s    7 enterText:[res:id/home_search_bar]                           TId:    1 android.os.PowerManager$WakeLock: void acquire()
+         None! |    0m 30s    7 background                                                   TId: 2315 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.ebay.mobile.providers.itemcacheprovider/saved_search
+   4m 15s   75 |    0m 30s    7 background                                                   TId: 2350 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+         None! |    0m 30s    7 background                                                   TId: 2351 android.os.PowerManager$WakeLock: void release(int)
+         None! |    0m 30s    7 background                                                   TId: 2348 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.ebay.mobile.providers.itemcacheprovider/local_notifications
+         None! |    0m 30s    7 background                                                   TId: 2363 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.ebay.mobile.providers.itemcacheprovider/local_notifications
+   4m 15s   75 |    0m 31s    7 background                                                   TId: 2365 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+         None! |    0m 32s    7 background                                                   TId: 2350 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.ebay.mobile.providers.itemcacheprovider/saved_search
+   4m 15s   75 |    0m 33s    7 background                                                   TId: 2367 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+
+
+==============================================================
+droidmate-run:com.ebay.mobile
+==============================================================
+
+Total run time:       120m 22s
+Total actions count: 2011 (including the final action terminating exploration)
+Total resets count:    95 (including the initial action)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 9
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     API signature
+   0m  6s    1 TId:    1 android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)
+   0m  8s    1 TId: 3217 java.net.Socket: void <init>
+   0m  9s    1 TId: 3228 java.net.URL: java.net.URLConnection openConnection()
+   0m 10s    1 TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+   0m 10s    1 TId:    1 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+   0m 10s    1 TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+   1m 38s   26 TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+   1m 38s   26 TId:    1 android.location.LocationManager: boolean isProviderEnabled(java.lang.String)
+  19m 55s  335 TId:    1 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.ebay.mobile.ebaysearch/suggestions
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 27
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     Event                                                        API signature
+   0m  6s    1 <reset>                                                      TId:    1 android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)
+   0m  8s    1 <reset>                                                      TId: 3217 java.net.Socket: void <init>
+   0m  9s    1 <reset>                                                      TId: 3228 java.net.URL: java.net.URLConnection openConnection()
+   0m 10s    1 <reset>                                                      TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+   0m 10s    1 <reset>                                                      TId:    1 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+   0m 10s    1 <reset>                                                      TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+   0m 31s    4 background                                                   TId: 3244 java.net.URL: java.net.URLConnection openConnection()
+   1m 38s   26 <reset>                                                      TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+   1m 38s   26 <reset>                                                      TId:    1 android.location.LocationManager: boolean isProviderEnabled(java.lang.String)
+   2m 24s   35 background                                                   TId: 3225 java.net.Socket: void <init>
+   4m 15s   75 unlabeled                                                    TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+   4m 15s   75 unlabeled                                                    TId:    1 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+   4m 15s   75 unlabeled                                                    TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+   5m 50s  109 click:[res:android:id/checkbox]                              TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+   5m 51s  109 click:[res:android:id/checkbox]                              TId:    1 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+   5m 51s  109 click:[res:android:id/checkbox]                              TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+  17m 17s  290 click:[res:id/list]                                          TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+  17m 17s  290 click:[res:id/list]                                          TId:    1 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+  17m 17s  290 click:[res:id/list]                                          TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+  19m 55s  335 click:[res:android:id/button1]                               TId:    1 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.ebay.mobile.ebaysearch/suggestions
+  61m 34s 1037 click:[res:id/saveSearch]                                    TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.ebay.mobile.providers.itemcacheprovider/name_value
+  62m  2s 1048 click:[res:id/register_button]                               TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+  62m  2s 1048 click:[res:id/register_button]                               TId:    1 android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)
+  62m  2s 1048 click:[res:id/register_button]                               TId:    1 android.location.LocationManager: boolean isProviderEnabled(java.lang.String)
+  98m 17s 1652 click:[res:id/menu_search]                                   TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+  98m 17s 1652 click:[res:id/menu_search]                                   TId:    1 android.location.LocationManager: void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)
+  98m 17s 1652 click:[res:id/menu_search]                                   TId:    1 android.location.LocationManager: boolean isProviderEnabled(java.lang.String)
+
+

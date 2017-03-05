@@ -1,0 +1,149 @@
+==============================================================
+use-case:scanReport:com.cleanmaster.security
+==============================================================
+
+// Manually-written description of the actions of the use case:
+//
+//  1. Reset the app by calling Package Manager through adb (Android Debug Bridge).
+//  2. Click the 'Scan' button.
+//  3. Wait until the 'Resolve All' button appears and click it.
+//  4. Wait until the 'Report' button appears to report 'AntiVirus' app and click it.
+//  5. Wait until the 'OK' button appears to confirm 'AntiVirus' report success and click it.
+//  6. Click the 'Finish' button.
+//  7. Terminate the exploration.
+
+Total run time:         1m 11s
+Total actions count:    7 (including the final action terminating exploration)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 9
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     | Use case       API signature
+   0m  6s    1 |    0m  5s    1 TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+   0m  6s    1 |    0m  5s    1 TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.android.launcher2.settings/favorites
+   0m  7s    1 |    0m  6s    1 TId:    1 android.telephony.TelephonyManager: void listen(android.telephony.PhoneStateListener,int)
+   0m  7s    1 |    0m  6s    1 TId: 2122 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://browser/bookmarks
+   0m  8s    1 |    0m  6s    1 TId: 2123 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.android.chrome.browser/bookmarks
+   0m 11s    1 |    0m 13s    2 TId: 2121 java.net.URL: java.net.URLConnection openConnection()
+   0m  9s    1 |    0m 13s    2 TId: 2121 java.net.Socket: void <init>
+   0m 52s   18 |    0m 15s    3 TId:    1 android.os.PowerManager$WakeLock: void acquire()
+   0m 56s   18 |    0m 19s    3 TId: 2137 android.os.PowerManager$WakeLock: void release(int)
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 14
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     | Use case       Event                                                        API signature
+   0m  6s    1 |    0m  5s    1 <reset>                                                      TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+   0m  6s    1 |    0m  5s    1 <reset>                                                      TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.android.launcher2.settings/favorites
+   0m  7s    1 |    0m  6s    1 <reset>                                                      TId:    1 android.telephony.TelephonyManager: void listen(android.telephony.PhoneStateListener,int)
+   0m  7s    1 |    0m  6s    1 <reset>                                                      TId: 2122 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://browser/bookmarks
+   0m  8s    1 |    0m  6s    1 <reset>                                                      TId: 2123 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.android.chrome.browser/bookmarks
+   0m 17s    2 |    0m 13s    2 background                                                   TId: 2121 java.net.URL: java.net.URLConnection openConnection()
+   0m 17s    2 |    0m 13s    2 background                                                   TId: 2121 java.net.Socket: void <init>
+         None! |    0m 14s    2 click:[res:id/layout_main]                                   TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+   0m 22s    4 |    0m 14s    2 background                                                   TId: 2133 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+         None! |    0m 15s    3 click:[res:id/oprator_finish]                                TId:    1 android.os.PowerManager$WakeLock: void acquire()
+  56m 17s  773 |    0m 15s    3 click:[res:id/oprator_finish]                                TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+   0m 56s   18 |    0m 19s    3 background                                                   TId: 2137 android.os.PowerManager$WakeLock: void release(int)
+         None! |    0m 22s    4 click:[res:id/dialog_btn_report]                             TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+   1m 54s   24 |    0m 50s    6 click:[res:id/finish]                                        TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+
+
+==============================================================
+droidmate-run:com.cleanmaster.security
+==============================================================
+
+Total run time:       120m 24s
+Total actions count: 1683 (including the final action terminating exploration)
+Total resets count:    99 (including the initial action)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 13
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     API signature
+   0m  6s    1 TId: 1344 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+   0m  6s    1 TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.android.launcher2.settings/favorites
+   0m  7s    1 TId:    1 android.telephony.TelephonyManager: void listen(android.telephony.PhoneStateListener,int)
+   0m  7s    1 TId: 1354 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://browser/bookmarks
+   0m  8s    1 TId: 1354 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.android.chrome.browser/bookmarks
+   0m 17s    2 TId: 1352 java.net.URL: java.net.URLConnection openConnection()
+   0m 17s    2 TId: 1352 java.net.Socket: void <init>
+   0m 23s    5 TId: 1367 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://ks.cm.antivirus.firewall.security/call_block_logs
+   0m 28s    7 TId: 1369 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://ks.cm.antivirus.firewall.security/user_rules
+   0m 35s   10 TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.android.contacts/data/phones
+   0m 52s   18 TId:    1 android.os.PowerManager$WakeLock: void acquire()
+   0m 56s   18 TId: 1384 android.os.PowerManager$WakeLock: void release(int)
+  73m 14s 1007 TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://call_log/calls
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 54
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     Event                                                        API signature
+   0m  6s    1 <reset>                                                      TId: 1344 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+   0m  6s    1 <reset>                                                      TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.android.launcher2.settings/favorites
+   0m  7s    1 <reset>                                                      TId:    1 android.telephony.TelephonyManager: void listen(android.telephony.PhoneStateListener,int)
+   0m  7s    1 <reset>                                                      TId: 1354 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://browser/bookmarks
+   0m  8s    1 <reset>                                                      TId: 1354 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.android.chrome.browser/bookmarks
+   0m 17s    2 background                                                   TId: 1352 java.net.URL: java.net.URLConnection openConnection()
+   0m 17s    2 background                                                   TId: 1352 java.net.Socket: void <init>
+   0m 22s    4 background                                                   TId: 1356 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+   0m 23s    5 background                                                   TId: 1367 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://ks.cm.antivirus.firewall.security/call_block_logs
+   0m 23s    5 click:[res:id/menu_item_call_block]                          TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+   0m 28s    7 background                                                   TId: 1369 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://ks.cm.antivirus.firewall.security/user_rules
+   0m 35s   10 click:[res:id/edit_import_contact]                           TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.android.contacts/data/phones
+   0m 46s   16 click:[res:id/custom_title_layout_left]                      TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+   0m 51s   18 click:[res:id/btn_scan]                                      TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+   0m 52s   18 click:[res:id/btn_scan]                                      TId:    1 android.os.PowerManager$WakeLock: void acquire()
+   0m 56s   18 background                                                   TId: 1384 android.os.PowerManager$WakeLock: void release(int)
+   1m  1s   20 click:[res:id/btnRepair]                                     TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+   1m 54s   24 click:[res:id/finish]                                        TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+   2m 10s   29 click:[res:id/tv_banner]                                     TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+   3m 39s   58 click:[res:id/browser_huoyan_report]                         TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+   4m 44s   68 click:[res:id/layout_private_bg]                             TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+   4m 52s   71 click:[res:id/details_bottom_right]                          TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+   5m  1s   75 click:[res:id/details_app_operate]                           TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+   7m 44s  115 click:[res:id/menu_item_rateus]                              TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+   9m  5s  130 click:[res:id/dialog_btn_continue]                           TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+   9m 31s  133 click:[res:id/menu_item_virus_db_update]                     TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+   9m 43s  134 click:[res:id/dialog_btn_ok]                                 TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+  10m 10s  143 click:[res:id/details_bottom_left]                           TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+  11m 20s  155 click:[res:id/sdscan_back]                                   TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+  11m 20s  155 click:[res:id/sdscan_back]                                   TId:    1 android.os.PowerManager$WakeLock: void release(int)
+  15m  1s  220 click:[res:id/dialog_btn_open]                               TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+  15m  3s  221 click:[res:id/setting_protect_intime_btn]                    TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+  15m  8s  223 unlabeled                                                    TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+  15m 10s  224 click:[res:id/setting_auto_update_btn]                       TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+  15m 12s  225 click:[res:id/setting_open_inspire_layout]                   TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+  15m 15s  226 click:[res:id/setting_auto_update_layout]                    TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+  16m 53s  232 click:[res:id/dialog_timing_week]                            TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+  17m  4s  237 click:[res:id/setting_protect_intime_layout]                 TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+  17m  8s  239 click:[res:id/setting_safe_scan_btn]                         TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+  17m 11s  240 click:[res:id/setting_safe_scan_layout]                      TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+  26m  2s  361 click:[res:id/dialog_timing_day]                             TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+  26m 19s  369 click:[res:id/dialog_timing_off]                             TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+  26m 35s  373 click:[res:id/protect_operator_group]                        TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+  27m 17s  384 click:[res:id/layout_state]                                  TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+  49m 56s  684 click:[res:id/intl_about_feedback]                           TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+  54m 16s  736 click:[res:id/setting_open_inspire_btn]                      TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+  55m 42s  762 click:[res:id/main_title_btn_back]                           TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+  56m 17s  773 click:[res:id/oprator_finish]                                TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+  62m 17s  870 click:[res:id/dialog_timing_month]                           TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+  73m 14s 1007 click:[res:id/edit_import_calllog]                           TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://call_log/calls
+  78m 11s 1088 click:[res:id/mLanguageList]                                 TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://ks.cm.antivirus.config.security
+  80m 31s 1126 <reset>                                                      TId: 2622 java.net.Socket: void <init>
+  82m 53s 1165 click:[res:id/main_title_btn_back]                           TId:    1 android.os.PowerManager$WakeLock: void release(int)
+ 111m 42s 1551 background                                                   TId: 3034 android.os.PowerManager$WakeLock: void acquire()
+
+

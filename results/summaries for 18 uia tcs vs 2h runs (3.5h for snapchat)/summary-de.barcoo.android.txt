@@ -1,0 +1,131 @@
+==============================================================
+use-case:searchForProduct:de.barcoo.android
+==============================================================
+
+// Manually-written description of the actions of the use case:
+//
+//  1. Reset the app by calling Package Manager through adb (Android Debug Bridge).
+//  2. Click the 'side menu' button to open it.
+//  3. Click the 'suchen' ('search') button in the side menu.
+//  4. Enter 'pillow' in the search box.
+//  5. Press the 'Done' button on the displayed native keyboard to confirm the search.
+//  6. Click the first item in the search result list.
+//  7. Terminate the exploration.
+
+Total run time:         0m 26s
+Total actions count:    7 (including the final action terminating exploration)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 10
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     | Use case       API signature
+   0m  4s    1 |    0m  5s    1 TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://de.barcoo.provider.Setting/setting
+   0m  5s    1 |    0m  5s    1 TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://de.barcoo.provider.Setting/setting
+   0m  5s    1 |    0m  5s    1 TId: 3014 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+   0m  4s    1 |    0m  5s    1 TId: 3016 java.net.URL: java.net.URLConnection openConnection()
+   0m  5s    1 |    0m  6s    1 TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.facebook.katana.provider.AttributionIdProvider
+   0m  4s    1 |    0m  6s    1 TId: 3016 java.net.Socket: void <init>
+   0m 17s    4 |    0m 19s    6 TId:    1 android.location.LocationManager: void requestSingleUpdate(android.location.Criteria,android.app.PendingIntent)
+   0m 48s   14 |    0m 23s    6 TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://de.barcoo.provider.RememberedProduct/product
+   0m 48s   14 |    0m 23s    6 TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://de.barcoo.provider.RememberedProduct/product
+   0m 50s   14 |    0m 24s    6 TId:    1 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://de.barcoo.provider.RememberedProduct/product
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 14
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     | Use case       Event                                                        API signature
+   0m  4s    1 |    0m  5s    1 <reset>                                                      TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://de.barcoo.provider.Setting/setting
+   0m  5s    1 |    0m  5s    1 <reset>                                                      TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://de.barcoo.provider.Setting/setting
+   0m  5s    1 |    0m  5s    1 <reset>                                                      TId: 3014 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+   0m  4s    1 |    0m  5s    1 <reset>                                                      TId: 3016 java.net.URL: java.net.URLConnection openConnection()
+   0m  5s    1 |    0m  6s    1 <reset>                                                      TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.facebook.katana.provider.AttributionIdProvider
+   0m  4s    1 |    0m  6s    1 <reset>                                                      TId: 3016 java.net.Socket: void <init>
+   0m 12s    2 |    0m  8s    2 background                                                   TId: 3014 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+   0m 14s    3 |    0m  8s    2 background                                                   TId: 3023 java.net.URL: java.net.URLConnection openConnection()
+   0m 16s    4 |    0m  9s    2 background                                                   TId: 3016 java.net.Socket: void <init>
+   0m 37s   11 |    0m 19s    6 unlabeled                                                    TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+         None! |    0m 19s    6 unlabeled                                                    TId:    1 android.location.LocationManager: void requestSingleUpdate(android.location.Criteria,android.app.PendingIntent)
+   0m 48s   14 |    0m 23s    6 unlabeled                                                    TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://de.barcoo.provider.RememberedProduct/product
+   0m 48s   14 |    0m 23s    6 unlabeled                                                    TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://de.barcoo.provider.RememberedProduct/product
+   0m 50s   14 |    0m 24s    6 unlabeled                                                    TId:    1 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://de.barcoo.provider.RememberedProduct/product
+
+
+==============================================================
+droidmate-run:de.barcoo.android
+==============================================================
+
+Total run time:       120m 31s
+Total actions count: 1605 (including the final action terminating exploration)
+Total resets count:   138 (including the initial action)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 10
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     API signature
+   0m  4s    1 TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://de.barcoo.provider.Setting/setting
+   0m  5s    1 TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://de.barcoo.provider.Setting/setting
+   0m  5s    1 TId: 2992 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+   0m  5s    1 TId: 2994 java.net.URL: java.net.URLConnection openConnection()
+   0m  5s    1 TId: 2994 java.net.Socket: void <init>
+   0m  5s    1 TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.facebook.katana.provider.AttributionIdProvider
+   0m 17s    4 TId:    1 android.location.LocationManager: void requestSingleUpdate(android.location.Criteria,android.app.PendingIntent)
+   0m 48s   14 TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://de.barcoo.provider.RememberedProduct/product
+   0m 48s   14 TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://de.barcoo.provider.RememberedProduct/product
+   0m 50s   14 TId:    1 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://de.barcoo.provider.RememberedProduct/product
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 38
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     Event                                                        API signature
+   0m  4s    1 <reset>                                                      TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://de.barcoo.provider.Setting/setting
+   0m  5s    1 <reset>                                                      TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://de.barcoo.provider.Setting/setting
+   0m  5s    1 <reset>                                                      TId: 2992 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+   0m  5s    1 <reset>                                                      TId: 2994 java.net.URL: java.net.URLConnection openConnection()
+   0m  5s    1 <reset>                                                      TId: 2994 java.net.Socket: void <init>
+   0m  5s    1 <reset>                                                      TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.facebook.katana.provider.AttributionIdProvider
+   0m 12s    2 background                                                   TId: 2992 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+   0m 14s    3 background                                                   TId: 3002 java.net.URL: java.net.URLConnection openConnection()
+   0m 16s    4 background                                                   TId: 2994 java.net.Socket: void <init>
+   0m 17s    4 click:[res:id/smallImageItemTemplate]                        TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+   0m 17s    4 click:[res:id/smallImageItemTemplate]                        TId:    1 android.location.LocationManager: void requestSingleUpdate(android.location.Criteria,android.app.PendingIntent)
+   0m 26s    7 click:[res:id/menuItemTemplate]                              TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+   0m 48s   14 unlabeled                                                    TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://de.barcoo.provider.RememberedProduct/product
+   0m 48s   14 unlabeled                                                    TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://de.barcoo.provider.RememberedProduct/product
+   0m 50s   14 unlabeled                                                    TId:    1 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://de.barcoo.provider.RememberedProduct/product
+   1m 21s   17 click:[res:id/fullWidthImageItemTemplate]                    TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+   1m 58s   24 click:[res:id/contentPlaceholder]                            TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+   6m  3s   82 click:[res:id/menuItemTemplate]                              TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://de.barcoo.provider.RememberedProduct/product
+  21m 42s  303 click:[res:id/lin_widget44]                                  TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://de.barcoo.provider.RememberedProduct/product
+  21m 42s  303 click:[res:id/lin_widget44]                                  TId:    1 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://de.barcoo.provider.RememberedProduct/product
+  21m 42s  303 click:[res:id/lin_widget44]                                  TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+  27m 26s  370 click:[dsc:close drawer]                                     TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://de.barcoo.provider.RememberedProduct/product
+  27m 26s  370 click:[dsc:close drawer]                                     TId:    1 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://de.barcoo.provider.RememberedProduct/product
+  27m 29s  371 click:[res:id/menuItemTemplate]                              TId:    1 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://de.barcoo.provider.RememberedProduct/product
+  39m 58s  536 click:[dsc:close drawer]                                     TId:    1 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://de.barcoo.provider.RememberedProduct/product
+  43m 20s  578 click:[res:android:id/default_activity_button]               TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://de.barcoo.provider.RememberedProduct/product
+  43m 20s  578 click:[res:android:id/default_activity_button]               TId:    1 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://de.barcoo.provider.RememberedProduct/product
+  46m 30s  611 click:[dsc:Navigate up]                                      TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://de.barcoo.provider.RememberedProduct/product
+  46m 30s  611 click:[dsc:Navigate up]                                      TId:    1 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://de.barcoo.provider.RememberedProduct/product
+  60m 20s  799 click:[res:android:id/expand_activities_button]              TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://de.barcoo.provider.RememberedProduct/product
+  60m 20s  799 click:[res:android:id/expand_activities_button]              TId:    1 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://de.barcoo.provider.RememberedProduct/product
+  64m 39s  854 click:[res:id/title]                                         TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://de.barcoo.provider.RememberedProduct/product
+  64m 39s  854 click:[res:id/title]                                         TId:    1 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://de.barcoo.provider.RememberedProduct/product
+  77m 13s 1024 l-click:[res:android:id/default_activity_button]             TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://de.barcoo.provider.RememberedProduct/product
+  77m 13s 1024 l-click:[res:android:id/default_activity_button]             TId:    1 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://de.barcoo.provider.RememberedProduct/product
+ 111m 49s 1500 click:[res:id/history_gridview]                              TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://de.barcoo.provider.RememberedProduct/product
+ 111m 49s 1500 click:[res:id/history_gridview]                              TId:    1 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://de.barcoo.provider.RememberedProduct/product
+ 111m 49s 1500 click:[res:id/history_gridview]                              TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+
+

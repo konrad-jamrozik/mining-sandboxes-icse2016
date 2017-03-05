@@ -1,0 +1,67 @@
+==============================================================
+use-case:searchForJob:com.indeed.android.jobsearch
+==============================================================
+
+// Manually-written description of the actions of the use case:
+//
+//  1. Reset the app by calling Package Manager through adb (Android Debug Bridge).
+//  2. Click 'Use without account' to proceed without an account.
+//  3. Click the 'what' (job title) search field.
+//  4. Click the 's' letter on the on-screen keyboard to make a suggestion pop-up appear with job titles starting with 's'.
+//  5. Click the 'sales' job title in the suggestion box.
+//  6. Click the 'where' (city) search field.
+//  7. Click the 'n' letter on the on-screen keyboard to make a suggestion pop-up appear with cities starting with 'n'.
+//  8. Click the 'New York, NY' entry in the suggestion box.
+//  9. Click the 'Find Jobs' button.
+// 10. Click the first found job on the list.
+// 11. Terminate the exploration.
+
+Total run time:         0m 30s
+Total actions count:   11 (including the final action terminating exploration)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 1
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     | Use case       API signature
+   0m  3s    1 |    0m  2s    1 TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.facebook.katana.provider.AttributionIdProvider
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 1
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     | Use case       Event                                                        API signature
+   0m  3s    1 |    0m  2s    1 <reset>                                                      TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.facebook.katana.provider.AttributionIdProvider
+
+
+==============================================================
+droidmate-run:com.indeed.android.jobsearch
+==============================================================
+
+Total run time:       120m 20s
+Total actions count: 2392 (including the final action terminating exploration)
+Total resets count:    80 (including the initial action)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 1
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     API signature
+   0m  3s    1 TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.facebook.katana.provider.AttributionIdProvider
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 1
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     Event                                                        API signature
+   0m  3s    1 <reset>                                                      TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.facebook.katana.provider.AttributionIdProvider
+
+

@@ -1,0 +1,69 @@
+==============================================================
+use-case:convertCurrency:com.frank_weber.forex2
+==============================================================
+
+// Manually-written description of the actions of the use case:
+//
+//  1. Reset the app by calling Package Manager through adb (Android Debug Bridge).
+//  2. Click the 'Let's start' button to close the 'welcome' pop-up.
+//  3. Click the '1' digit.
+//  4. Click the '5' digit.
+//  5. Click the '9' digit.
+//  6. Click the 'swap currencies' button. The user now reads the converted currency.
+//  7. Terminate the exploration.
+
+Total run time:         0m 13s
+Total actions count:    7 (including the final action terminating exploration)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 2
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     | Use case       API signature
+   0m  1s    1 |    0m  1s    1 TId: 2473 java.net.URL: java.net.URLConnection openConnection()
+   0m  1s    1 |    0m  1s    1 TId: 2473 java.net.Socket: void <init>
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 2
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     | Use case       Event                                                        API signature
+   0m  1s    1 |    0m  1s    1 <reset>                                                      TId: 2473 java.net.URL: java.net.URLConnection openConnection()
+   0m  1s    1 |    0m  1s    1 <reset>                                                      TId: 2473 java.net.Socket: void <init>
+
+
+==============================================================
+droidmate-run:com.frank_weber.forex2
+==============================================================
+
+Total run time:       120m 19s
+Total actions count: 2354 (including the final action terminating exploration)
+Total resets count:   113 (including the initial action)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 2
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     API signature
+   0m  1s    1 TId:  176 java.net.URL: java.net.URLConnection openConnection()
+   0m  1s    1 TId:  176 java.net.Socket: void <init>
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 4
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     Event                                                        API signature
+   0m  1s    1 <reset>                                                      TId:  176 java.net.URL: java.net.URLConnection openConnection()
+   0m  1s    1 <reset>                                                      TId:  176 java.net.Socket: void <init>
+  19m 49s  381 background                                                   TId:  260 java.net.Socket: void <init>
+ 100m 47s 1983 background                                                   TId:  514 java.net.URL: java.net.URLConnection openConnection()
+
+

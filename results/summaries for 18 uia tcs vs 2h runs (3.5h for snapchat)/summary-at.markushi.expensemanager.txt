@@ -1,0 +1,134 @@
+==============================================================
+use-case:addAndEditExpense:at.markushi.expensemanager
+==============================================================
+
+// Manually-written description of the actions of the use case:
+//
+//  1. Reset the app by calling Package Manager through adb (Android Debug Bridge).
+//  2. Click the plus sign in the upper right corner to record a new expense.
+//  3. Set the first digit of the expense, '1'.
+//  4. Set the second digit of the expense, '5'.
+//  5. Press the decimal sign while setting expense value.
+//  6. Set the third digit of the expense, '8'. The expense value is now 15.80.
+//  7. Confirm the expense value.
+//  8. Save the new expense.
+//  9. Unroll the expense category in the overview, to display the expense itself.
+// 10. Click the expense in the overview.
+// 11. Set expense category to 'Health'.
+// 12. Click 'edit note'.
+// 13. Set the note text to 'Pills'.
+// 14. Save the modified expense.
+// 15. Terminate the exploration.
+
+Total run time:         0m 34s
+Total actions count:   15 (including the final action terminating exploration)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 0
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     | Use case       API signature
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 0
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     | Use case       Event                                                        API signature
+
+
+==============================================================
+use-case:deleteExpenseFromHistory:at.markushi.expensemanager
+==============================================================
+
+// Manually-written description of the actions of the use case:
+//
+//  1. Reset the app by calling Package Manager through adb (Android Debug Bridge).
+//  2. Open overview menu.
+//  3. Click the 'history' tab.
+//  4. Click the only entry.
+//  5. Delete the entry.
+//  6. Terminate the exploration.
+
+Total run time:        10m  7s
+Total actions count:    6 (including the final action terminating exploration)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 0
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     | Use case       API signature
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 0
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     | Use case       Event                                                        API signature
+
+
+==============================================================
+use-case:viewAndSetBudget:at.markushi.expensemanager
+==============================================================
+
+// Manually-written description of the actions of the use case:
+//
+//  1. Reset the app by calling Package Manager through adb (Android Debug Bridge).
+//  2. Open the overview menu.
+//  3. Click the 'budget' tab.
+//  4. Click the 'Other' category.
+//  5. Click the '7' digit.
+//  6. Click the 'OK' button to confirm the budget for the 'Other' category.
+//  7. Terminate the exploration.
+
+Total run time:         0m 15s
+Total actions count:    7 (including the final action terminating exploration)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 0
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     | Use case       API signature
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 0
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     | Use case       Event                                                        API signature
+
+
+==============================================================
+droidmate-run:at.markushi.expensemanager
+==============================================================
+
+Total run time:       120m 19s
+Total actions count: 2558 (including the final action terminating exploration)
+Total resets count:   107 (including the initial action)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 0
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     API signature
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 0
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     Event                                                        API signature
+
+

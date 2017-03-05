@@ -1,0 +1,270 @@
+==============================================================
+use-case:edit_friend:com.snapchat.android
+==============================================================
+
+// Manually-written description of the actions of the use case:
+//
+//  1. Reset the app by calling Package Manager through adb (Android Debug Bridge).
+//  2. Click the 'LOG IN' button on the landing page (first screen).
+//  3. Enter the user name.
+//  4. Enter the password.
+//  5. Click the 'LOG IN' button to actually log into the app.
+//  6. Open the 'my friends' list by clicking the 'menu' button in the lower right corner.
+//  7. Click the search button in upper right to search for friends.
+//  8. Search for 'abc' by entering text into the auto-selected text field that appeared in upper left.
+//  9. Click on the displayed 'abc' name.
+// 10. Click on the cogwheel next to the friend name to display a menu allowing to add him.
+// 11. Click the 'Add friend' button in the settings popup.
+// 12. Click on the displayed 'abc' name.
+// 13. Click on the cogwheel next to the friend name to display a menu allowing to block him.
+// 14. Click the 'Block' button in the settings popup.
+// 15. Click on the cogwheel next to the friend name to display a menu allowing to unblock him.
+// 16. Click the 'Unblock' button in the settings popup.
+// 17. Click on the cogwheel next to the friend name to display a menu allowing to delete him.
+// 18. Click the 'Delete' button in the settings popup.
+// 19. Terminate the exploration.
+
+Total run time:         1m  8s
+Total actions count:   19 (including the final action terminating exploration)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 3
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     | Use case       API signature
+   0m  5s    1 |    0m 21s    5 TId: 1176 java.net.Socket: void <init>
+   0m 25s    5 |    0m 23s    5 TId: 1179 android.hardware.Camera: android.hardware.Camera open(int)
+   0m 27s    5 |    0m 24s    5 TId: 1185 java.net.URL: java.net.URLConnection openConnection()
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 3
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     | Use case       Event                                                        API signature
+   0m 23s    5 |    0m 21s    5 background                                                   TId: 1176 java.net.Socket: void <init>
+   0m 25s    5 |    0m 23s    5 background                                                   TId: 1179 android.hardware.Camera: android.hardware.Camera open(int)
+   0m 27s    5 |    0m 24s    5 background                                                   TId: 1185 java.net.URL: java.net.URLConnection openConnection()
+
+
+==============================================================
+use-case:find_friends:com.snapchat.android
+==============================================================
+
+// Manually-written description of the actions of the use case:
+//
+//  1. Reset the app by calling Package Manager through adb (Android Debug Bridge).
+//  2. Click the 'LOG IN' button on the landing page (first screen).
+//  3. Enter the user name.
+//  4. Enter the password.
+//  5. Click the 'LOG IN' button to actually log into the app.
+//  6. Open the 'my friends' list by clicking the 'menu' button in the lower right corner.
+//  7. Click the 'add friend' button in the upper right corner.
+//  8. Show the 'contacts list' tab by clicking on the 'contacts notebook' tab icon, in the upper right part of the screen.
+//  9. Press the 'back' button.
+// 10. Click the 'add friend' button in the upper right corner.
+// 11. Allow access to contacts list by clicking the 'Allow Access' button.
+// 12. Terminate the exploration.
+
+Total run time:         0m 58s
+Total actions count:   12 (including the final action terminating exploration)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 4
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     | Use case       API signature
+   0m  5s    1 |    0m 22s    5 TId: 1173 java.net.Socket: void <init>
+   0m 25s    5 |    0m 25s    5 TId: 1176 android.hardware.Camera: android.hardware.Camera open(int)
+   0m 27s    5 |    0m 27s    5 TId: 1178 java.net.URL: java.net.URLConnection openConnection()
+   5m 20s  111 |    0m 56s   11 TId: 1179 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.android.contacts/data/phones
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 4
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     | Use case       Event                                                        API signature
+   0m 23s    5 |    0m 22s    5 background                                                   TId: 1173 java.net.Socket: void <init>
+   0m 25s    5 |    0m 25s    5 background                                                   TId: 1176 android.hardware.Camera: android.hardware.Camera open(int)
+   0m 27s    5 |    0m 27s    5 background                                                   TId: 1178 java.net.URL: java.net.URLConnection openConnection()
+   5m 20s  111 |    0m 56s   11 background                                                   TId: 1179 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.android.contacts/data/phones
+
+
+==============================================================
+use-case:take_snap:com.snapchat.android
+==============================================================
+
+// Manually-written description of the actions of the use case:
+//
+//  1. Reset the app by calling Package Manager through adb (Android Debug Bridge).
+//  2. Click the 'LOG IN' button on the landing page (first screen).
+//  3. Enter the user name.
+//  4. Enter the password.
+//  5. Click the 'LOG IN' button to actually log into the app.
+//  6. Click the 'take snap' button in the lower middle to make a picture with a camera.
+//  7. Click the screen (displaying the taken snap) to make the caption edit field appear.
+//  8. Add a caption to the taken snap.
+//  9. Press the 'back' button.
+// 10. Click the stopwatch in the lower left corner to set time.
+// 11. Set snap retention time of 4 seconds (instead of default 3) by clicking in lower part of the time spinner menu, being displayed at the bottom.
+// 12. Press the 'back' button.
+// 13. Click the right arrow in the bottom right to show a list of snap recipients.
+// 14. Check-mark myself as the sole snap recipient.
+// 15. Send the snap by clicking the right arrow in the lower right of the screen.
+// 16. View the snap that just arrived (because I sent it to myself) by clicking on its status in its entry in the snap feed list.
+// 17. Terminate the exploration.
+
+Total run time:         1m 23s
+Total actions count:   17 (including the final action terminating exploration)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 4
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     | Use case       API signature
+   0m  5s    1 |    0m 21s    5 TId: 1169 java.net.Socket: void <init>
+   0m 25s    5 |    0m 24s    5 TId: 1172 android.hardware.Camera: android.hardware.Camera open(int)
+   0m 27s    5 |    0m 26s    5 TId: 1171 java.net.URL: java.net.URLConnection openConnection()
+   4m 54s  100 |    1m 21s   16 TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://media/external/images/media
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 4
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     | Use case       Event                                                        API signature
+   0m 23s    5 |    0m 21s    5 background                                                   TId: 1169 java.net.Socket: void <init>
+   0m 25s    5 |    0m 24s    5 background                                                   TId: 1172 android.hardware.Camera: android.hardware.Camera open(int)
+   0m 27s    5 |    0m 26s    5 background                                                   TId: 1171 java.net.URL: java.net.URLConnection openConnection()
+         None! |    1m 21s   16 l-click:[res:id/status]                                      TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://media/external/images/media
+
+
+==============================================================
+use-case:take_video_snap:com.snapchat.android
+==============================================================
+
+// Manually-written description of the actions of the use case:
+//
+//  1. Reset the app by calling Package Manager through adb (Android Debug Bridge).
+//  2. Click the 'LOG IN' button on the landing page (first screen).
+//  3. Enter the user name.
+//  4. Enter the password.
+//  5. Click the 'LOG IN' button to actually log into the app.
+//  6. Click and hold the 'take snap' button in the lower middle to make a video with a camera.
+//  7. Click the 'pencil' button in the upper right corner to start drawing on the device.
+//  8. Pick a color by clicking in the center of the color palette that just appeared in the upper right corner.
+//  9. Draw a line across the screen (displaying the taken video snap).
+// 10. Save the video to gallery by clicking the 'save' button in lower left.
+// 11. Click the 'add to story' button in lower left.
+// 12. Click 'add' in the pop-up box to confirm I want to add the snap to my story.
+// 13. Terminate the exploration.
+
+Total run time:         1m  2s
+Total actions count:   13 (including the final action terminating exploration)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 5
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     | Use case       API signature
+   0m  5s    1 |    0m 21s    5 TId: 1181 java.net.Socket: void <init>
+   0m 25s    5 |    0m 23s    5 TId: 1184 android.hardware.Camera: android.hardware.Camera open(int)
+   0m 27s    5 |    0m 24s    5 TId: 1190 java.net.URL: java.net.URLConnection openConnection()
+   4m 42s   97 |    0m 27s    6 TId:    1 android.media.MediaRecorder: void setAudioSource(int)
+   4m 42s   97 |    0m 27s    6 TId:    1 android.media.MediaRecorder: void setVideoSource(int)
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 5
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     | Use case       Event                                                        API signature
+   0m 23s    5 |    0m 21s    5 background                                                   TId: 1181 java.net.Socket: void <init>
+   0m 25s    5 |    0m 23s    5 background                                                   TId: 1184 android.hardware.Camera: android.hardware.Camera open(int)
+   0m 27s    5 |    0m 24s    5 background                                                   TId: 1190 java.net.URL: java.net.URLConnection openConnection()
+   4m 42s   97 |    0m 27s    6 l-click:[res:id/camera_take_snap_button]                     TId:    1 android.media.MediaRecorder: void setAudioSource(int)
+   4m 42s   97 |    0m 27s    6 l-click:[res:id/camera_take_snap_button]                     TId:    1 android.media.MediaRecorder: void setVideoSource(int)
+
+
+==============================================================
+droidmate-run:com.snapchat.android
+==============================================================
+
+Total run time:       210m 22s
+Total actions count: 4358 (including the final action terminating exploration)
+Total resets count:   149 (including the initial action)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 11
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     API signature
+   0m 23s    5 TId: 4608 java.net.Socket: void <init>
+   0m 25s    5 TId: 4611 android.hardware.Camera: android.hardware.Camera open(int)
+   0m 25s    5 TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+   0m 27s    5 TId: 4617 java.net.URL: java.net.URLConnection openConnection()
+   0m 36s    9 TId:    1 android.location.LocationManager: boolean isProviderEnabled(java.lang.String)
+   4m 42s   97 TId:    1 android.media.MediaRecorder: void setAudioSource(int)
+   4m 42s   97 TId:    1 android.media.MediaRecorder: void setVideoSource(int)
+   4m 54s  100 TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://media/external/images/media
+   5m 20s  111 TId: 4623 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.android.contacts/data/phones
+   9m 14s  190 TId: 4641 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://media/external/images/media
+   9m 16s  191 TId: 4641 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://media/external/images/media/<number>
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 33
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     Event                                                        API signature
+   0m 23s    5 background                                                   TId: 4608 java.net.Socket: void <init>
+   0m 25s    5 background                                                   TId: 4611 android.hardware.Camera: android.hardware.Camera open(int)
+   0m 25s    5 click:[res:id/login_button]                                  TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+   0m 27s    5 background                                                   TId: 4617 java.net.URL: java.net.URLConnection openConnection()
+   0m 36s    9 click:[res:id/camera_take_snap_button]                       TId:    1 android.location.LocationManager: boolean isProviderEnabled(java.lang.String)
+   0m 36s    9 click:[res:id/camera_take_snap_button]                       TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+   1m 47s   35 <reset>                                                      TId: 4609 android.hardware.Camera: android.hardware.Camera open(int)
+   1m 47s   35 <reset>                                                      TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+   1m 47s   35 <reset>                                                      TId: 4610 java.net.Socket: void <init>
+   4m 42s   97 l-click:[res:id/camera_take_snap_button]                     TId:    1 android.media.MediaRecorder: void setAudioSource(int)
+   4m 42s   97 l-click:[res:id/camera_take_snap_button]                     TId:    1 android.media.MediaRecorder: void setVideoSource(int)
+   4m 54s  100 unlabeled                                                    TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://media/external/images/media
+   5m 20s  111 background                                                   TId: 4623 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.android.contacts/data/phones
+   6m  7s  125 <reset>                                                      TId: 4621 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.android.contacts/data/phones
+   7m 51s  162 click:[res:id/drawing_btn]                                   TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+   8m  4s  168 l-click:[res:id/camera_take_snap_button]                     TId:    1 android.location.LocationManager: boolean isProviderEnabled(java.lang.String)
+   8m  4s  168 l-click:[res:id/camera_take_snap_button]                     TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+   8m  7s  169 click:[res:id/snap_preview_relative_layout]                  TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+   8m 12s  171 click:[res:id/unmuted_button]                                TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+   8m 17s  173 click:[res:id/toggle_caption_btn]                            TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+   9m 12s  189 click:[res:android:id/button2]                               TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+   9m 14s  190 background                                                   TId: 4641 android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues) uri: content://media/external/images/media
+   9m 16s  191 background                                                   TId: 4641 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://media/external/images/media/<number>
+  13m 33s  281 click:[res:id/picture_send_pic]                              TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+  15m 30s  326 click:[res:android:id/button1]                               TId:    1 android.location.LocationManager: boolean isProviderEnabled(java.lang.String)
+  18m 37s  394 click:[res:id/picture_x]                                     TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+  23m 27s  488 click:[res:id/picture_save_pic]                              TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+  23m 37s  492 click:[res:id/picture_caption]                               TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+  27m 44s  586 click:[res:id/settings_smart_filters]                        TId:    1 android.location.LocationManager: boolean isProviderEnabled(java.lang.String)
+  33m  5s  699 click:[res:id/time_picker_button]                            TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+  62m 33s 1327 click:[res:id/settings_smart_filters_checkbox]               TId:    1 android.location.LocationManager: boolean isProviderEnabled(java.lang.String)
+  65m 58s 1393 <reset>                                                      TId:    1 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://media/external/images/media
+ 127m 31s 2667 click:[res:id/story_button]                                  TId:    1 android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)
+
+

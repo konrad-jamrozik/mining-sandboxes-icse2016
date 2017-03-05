@@ -1,0 +1,121 @@
+==============================================================
+use-case:openUrl:org.mozilla.firefox
+==============================================================
+
+// Manually-written description of the actions of the use case:
+//
+//  1. Reset the app by calling Package Manager through adb (Android Debug Bridge).
+//  2. Click the address bar.
+//  3. Enter 'www.google.com' in the address bar.
+//  4. Click the right arrow ('Go') button to go to google.com.
+//  5. Terminate the exploration.
+
+Total run time:         0m 25s
+Total actions count:    5 (including the final action terminating exploration)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 10
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     | Use case       API signature
+   0m  3s    1 |    0m  3s    1 TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://org.mozilla.firefox.db.browser/bookmarks
+   0m  3s    1 |    0m  4s    1 TId: 3076 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/bookmarks
+   0m  4s    1 |    0m  5s    2 TId: 3076 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/combined
+   0m  4s    1 |    0m  5s    2 TId: 3079 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/thumbnails
+   0m  4s    1 |    0m  6s    2 TId: 3065 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/history
+   0m  4s    1 |    0m  6s    2 TId: 3065 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/favicons
+   0m  6s    1 |    0m 11s    3 TId: 3068 java.net.Socket: void <init>
+   4m 11s   78 |    0m 18s    4 TId: 3065 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://org.mozilla.firefox.db.browser/history
+   4m 15s   79 |    0m 21s    4 TId: 3065 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://org.mozilla.firefox.db.browser/favicons
+   4m 16s   79 |    0m 21s    4 TId: 3065 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://org.mozilla.firefox.db.browser/thumbnails
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 11
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     | Use case       Event                                                        API signature
+   0m  3s    1 |    0m  3s    1 <reset>                                                      TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://org.mozilla.firefox.db.browser/bookmarks
+   0m  3s    1 |    0m  4s    1 <reset>                                                      TId: 3076 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/bookmarks
+   0m 16s    4 |    0m  5s    2 background                                                   TId: 3076 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/combined
+   0m 16s    4 |    0m  5s    2 background                                                   TId: 3079 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/thumbnails
+   2m  3s   40 |    0m  6s    2 background                                                   TId: 3065 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/history
+   2m  3s   40 |    0m  6s    2 background                                                   TId: 3065 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/favicons
+   0m 16s    4 |    0m  7s    3 background                                                   TId: 3065 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/bookmarks
+   0m 13s    3 |    0m 11s    3 background                                                   TId: 3068 java.net.Socket: void <init>
+   4m 11s   78 |    0m 18s    4 background                                                   TId: 3065 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://org.mozilla.firefox.db.browser/history
+   4m 15s   79 |    0m 21s    4 background                                                   TId: 3065 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://org.mozilla.firefox.db.browser/favicons
+   4m 16s   79 |    0m 21s    4 background                                                   TId: 3065 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://org.mozilla.firefox.db.browser/thumbnails
+
+
+==============================================================
+droidmate-run:org.mozilla.firefox
+==============================================================
+
+Total run time:       120m 21s
+Total actions count: 2126 (including the final action terminating exploration)
+Total resets count:    74 (including the initial action)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 17
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     API signature
+   0m  3s    1 TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://org.mozilla.firefox.db.browser/bookmarks
+   0m  3s    1 TId:  973 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/bookmarks
+   0m  4s    1 TId:  973 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/combined
+   0m  4s    1 TId:  976 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/thumbnails
+   0m  4s    1 TId:  962 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/history
+   0m  4s    1 TId:  962 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/favicons
+   0m  6s    1 TId:  978 java.net.Socket: void <init>
+   0m  9s    2 TId:  982 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/combined
+   0m 16s    4 TId:  962 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://org.mozilla.firefox.db.browser/bookmarks
+   2m 57s   60 TId:  971 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://org.mozilla.firefox.db.browser/history/old
+   3m 45s   74 TId:  999 java.net.URL: java.net.URLConnection openConnection()
+   4m 11s   78 TId:  998 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://org.mozilla.firefox.db.browser/history
+   4m 15s   79 TId:  998 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://org.mozilla.firefox.db.browser/favicons
+   4m 16s   79 TId:  998 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://org.mozilla.firefox.db.browser/thumbnails
+  17m  2s  313 TId: 1067 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.tabs/tabs
+  22m 16s  404 TId: 1091 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://org.mozilla.firefox.db.browser/bookmarks
+  69m 35s 1242 TId: 1271 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://org.mozilla.firefox.db.browser/bookmarks/parents
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 26
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     Event                                                        API signature
+   0m  3s    1 <reset>                                                      TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://org.mozilla.firefox.db.browser/bookmarks
+   0m  3s    1 <reset>                                                      TId:  973 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/bookmarks
+   0m  4s    1 <reset>                                                      TId:  973 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/combined
+   0m  4s    1 <reset>                                                      TId:  976 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/thumbnails
+   0m  4s    1 <reset>                                                      TId:  962 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/history
+   0m  4s    1 <reset>                                                      TId:  962 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/favicons
+   0m  6s    1 <reset>                                                      TId:  978 java.net.Socket: void <init>
+   0m  9s    2 background                                                   TId:  982 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/combined
+   0m 13s    3 background                                                   TId:  965 java.net.Socket: void <init>
+   0m 16s    4 background                                                   TId:  962 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://org.mozilla.firefox.db.browser/bookmarks
+   0m 16s    4 background                                                   TId:  962 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/bookmarks
+   0m 16s    4 background                                                   TId:  983 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/combined
+   0m 16s    4 background                                                   TId:  984 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/thumbnails
+   2m  3s   40 background                                                   TId:  971 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/history
+   2m  3s   40 background                                                   TId:  971 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.browser/favicons
+   2m 57s   60 <reset>                                                      TId:  971 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://org.mozilla.firefox.db.browser/history/old
+   3m 45s   74 background                                                   TId:  999 java.net.URL: java.net.URLConnection openConnection()
+   4m 11s   78 background                                                   TId:  998 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://org.mozilla.firefox.db.browser/history
+   4m 15s   79 background                                                   TId:  998 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://org.mozilla.firefox.db.browser/favicons
+   4m 16s   79 background                                                   TId:  998 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://org.mozilla.firefox.db.browser/thumbnails
+  17m  2s  313 background                                                   TId: 1067 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://org.mozilla.firefox.db.tabs/tabs
+  17m 59s  330 background                                                   TId: 1073 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://org.mozilla.firefox.db.browser/history/old
+  22m 16s  404 background                                                   TId: 1091 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://org.mozilla.firefox.db.browser/bookmarks
+  23m  9s  421 <reset>                                                      TId: 1091 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://org.mozilla.firefox.db.browser/thumbnails
+  69m 11s 1234 click:[res:id/restart]                                       TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://org.mozilla.firefox.db.browser/bookmarks
+  69m 35s 1242 background                                                   TId: 1271 android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) uri: content://org.mozilla.firefox.db.browser/bookmarks/parents
+
+

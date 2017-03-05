@@ -1,0 +1,204 @@
+==============================================================
+use-case:scan:com.antivirus
+==============================================================
+
+// Manually-written description of the actions of the use case:
+//
+//  1. Reset the app by calling Package Manager through adb (Android Debug Bridge).
+//  2. Click the 'Activate' button.
+//  3. Click the 'Scan Now' button.
+//  4. Wait until the 'View Scan Results' button appears and click it.
+//  5. Terminate the exploration.
+
+Total run time:        12m 42s
+Total actions count:    5 (including the final action terminating exploration)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 13
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     | Use case       API signature
+   0m  4s    1 |    0m  4s    1 TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://sms/
+   0m  4s    1 |    0m  4s    1 TId:    1 android.telephony.TelephonyManager: java.lang.String getLine1Number()
+   0m  4s    1 |    0m  4s    1 TId:    1 android.telephony.TelephonyManager: java.lang.String getSimSerialNumber()
+   0m  4s    1 |    0m  4s    1 TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://settings/system
+   0m  4s    1 |    0m  4s    1 TId: 1159 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://call_log/calls
+   0m 13s    3 |    0m 14s    3 TId: 1159 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.android.chrome.browser/history
+   0m 13s    3 |    0m 14s    3 TId: 1159 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.android.chrome.browser/bookmarks
+   0m 13s    3 |    0m 14s    3 TId: 1159 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://browser/searches
+   0m 13s    3 |    0m 14s    3 TId: 1159 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://browser/bookmarks
+   0m 13s    3 |    0m 14s    3 TId: 1159 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.android.browser/history
+   0m 13s    3 |    0m 14s    3 TId: 1156 android.telephony.TelephonyManager: java.lang.String getDeviceId()
+   0m 14s    3 |    0m 15s    3 TId: 1159 java.net.URL: java.net.URLConnection openConnection()
+   0m 13s    3 |    0m 15s    3 TId: 1159 java.net.Socket: void <init>
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 16
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     | Use case       Event                                                        API signature
+   0m  4s    1 |    0m  4s    1 <reset>                                                      TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://sms/
+   0m  4s    1 |    0m  4s    1 <reset>                                                      TId:    1 android.telephony.TelephonyManager: java.lang.String getLine1Number()
+   0m  4s    1 |    0m  4s    1 <reset>                                                      TId:    1 android.telephony.TelephonyManager: java.lang.String getSimSerialNumber()
+   0m  4s    1 |    0m  4s    1 <reset>                                                      TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://settings/system
+   0m  4s    1 |    0m  4s    1 <reset>                                                      TId: 1159 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://call_log/calls
+   0m 13s    3 |    0m 14s    3 background                                                   TId: 1159 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.android.chrome.browser/history
+   0m 13s    3 |    0m 14s    3 background                                                   TId: 1159 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.android.chrome.browser/bookmarks
+   0m 13s    3 |    0m 14s    3 background                                                   TId: 1159 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://browser/searches
+   0m 13s    3 |    0m 14s    3 background                                                   TId: 1159 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://browser/bookmarks
+   0m 13s    3 |    0m 14s    3 background                                                   TId: 1159 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.android.browser/history
+   0m 13s    3 |    0m 14s    3 background                                                   TId: 1156 android.telephony.TelephonyManager: java.lang.String getSimSerialNumber()
+   0m 13s    3 |    0m 14s    3 background                                                   TId: 1156 android.telephony.TelephonyManager: java.lang.String getDeviceId()
+   0m 13s    3 |    0m 14s    3 background                                                   TId: 1159 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://sms/
+   0m 14s    3 |    0m 15s    3 background                                                   TId: 1159 android.telephony.TelephonyManager: java.lang.String getLine1Number()
+   0m 14s    3 |    0m 15s    3 background                                                   TId: 1159 java.net.URL: java.net.URLConnection openConnection()
+   0m 13s    3 |    0m 15s    3 background                                                   TId: 1159 java.net.Socket: void <init>
+
+
+==============================================================
+droidmate-run:com.antivirus
+==============================================================
+
+Total run time:       120m 30s
+Total actions count: 1606 (including the final action terminating exploration)
+Total resets count:   114 (including the initial action)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 54
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     API signature
+   0m  4s    1 TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://sms/
+   0m  4s    1 TId:    1 android.telephony.TelephonyManager: java.lang.String getLine1Number()
+   0m  4s    1 TId:    1 android.telephony.TelephonyManager: java.lang.String getSimSerialNumber()
+   0m  4s    1 TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://settings/system
+   0m  4s    1 TId:  941 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://call_log/calls
+   0m 13s    3 TId:  941 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.android.chrome.browser/history
+   0m 13s    3 TId:  941 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.android.chrome.browser/bookmarks
+   0m 13s    3 TId:  941 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://browser/searches
+   0m 13s    3 TId:  941 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://browser/bookmarks
+   0m 13s    3 TId:  941 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.android.browser/history
+   0m 13s    3 TId:  938 android.telephony.TelephonyManager: java.lang.String getDeviceId()
+   0m 14s    4 TId:  941 java.net.URL: java.net.URLConnection openConnection()
+   0m 15s    4 TId:  941 java.net.Socket: void <init>
+  17m 49s  211 TId: 1022 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.android.chrome.browser/bookmarks
+  28m 37s  342 TId: 1092 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.android.browser/bookmarks
+  28m 43s  343 TId: 1093 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.android.browser/history
+  28m 43s  343 TId: 1094 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://sms
+  28m 44s  343 TId: 1094 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://logs/historys
+  28m 44s  343 TId: 1094 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://logs/historys
+  28m 44s  343 TId: 1094 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://sms/inbox
+  28m 45s  343 TId: 1094 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://sms/sent
+  28m 45s  343 TId: 1094 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://mms/inbox
+  28m 45s  343 TId: 1094 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://mms
+  28m 45s  343 TId: 1094 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://mms-sms
+  28m 45s  343 TId: 1094 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://mms/address
+  28m 45s  343 TId: 1094 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://mms/part
+  28m 45s  343 TId: 1094 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://mms/sent
+  28m 45s  343 TId: 1094 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://mms/outbox
+  28m 45s  343 TId: 1095 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://call_log/calls
+  28m 45s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.android.contacts/contacts
+  28m 45s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.android.contacts/data
+  28m 45s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.android.contacts/raw_contact_entities
+  28m 45s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.android.contacts/emails
+  28m 45s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.android.contacts/postals
+  28m 45s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.android.contacts/groups
+  28m 45s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.android.contacts/groups_summary
+  28m 45s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/people
+  28m 45s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/phones
+  28m 46s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/photos
+  28m 46s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/calls
+  28m 46s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/
+  28m 46s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/settings
+  28m 46s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/deleted_people
+  28m 46s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/people/with_email_or_im_filter
+  28m 46s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/groups
+  28m 46s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/deleted_groups
+  28m 46s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/groupmembership
+  28m 46s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/groupmembershipraw
+  28m 46s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/contact_methods
+  28m 46s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/contact_methods/email
+  28m 46s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/presence
+  28m 46s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/organizations
+  28m 49s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/extensions
+  28m 49s  343 TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.android.contacts/raw_contacts
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 64
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     Event                                                        API signature
+   0m  4s    1 <reset>                                                      TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://sms/
+   0m  4s    1 <reset>                                                      TId:    1 android.telephony.TelephonyManager: java.lang.String getLine1Number()
+   0m  4s    1 <reset>                                                      TId:    1 android.telephony.TelephonyManager: java.lang.String getSimSerialNumber()
+   0m  4s    1 <reset>                                                      TId:    1 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://settings/system
+   0m  4s    1 <reset>                                                      TId:  941 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://call_log/calls
+   0m 13s    3 background                                                   TId:  941 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.android.chrome.browser/history
+   0m 13s    3 background                                                   TId:  941 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.android.chrome.browser/bookmarks
+   0m 13s    3 background                                                   TId:  941 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://browser/searches
+   0m 13s    3 background                                                   TId:  941 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://browser/bookmarks
+   0m 13s    3 background                                                   TId:  941 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.android.browser/history
+   0m 13s    3 background                                                   TId:  938 android.telephony.TelephonyManager: java.lang.String getSimSerialNumber()
+   0m 13s    3 background                                                   TId:  938 android.telephony.TelephonyManager: java.lang.String getDeviceId()
+   0m 13s    3 background                                                   TId:  941 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://sms/
+   0m 14s    3 background                                                   TId:  941 android.telephony.TelephonyManager: java.lang.String getLine1Number()
+   0m 14s    4 background                                                   TId:  941 java.net.URL: java.net.URLConnection openConnection()
+   0m 15s    4 background                                                   TId:  941 java.net.Socket: void <init>
+   0m 48s    7 <reset>                                                      TId:  938 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.android.chrome.browser/history
+   0m 48s    7 <reset>                                                      TId:  938 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.android.chrome.browser/bookmarks
+   0m 48s    7 <reset>                                                      TId:  938 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://browser/searches
+   0m 48s    7 <reset>                                                      TId:  938 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://browser/bookmarks
+   0m 48s    7 <reset>                                                      TId:  938 android.content.ContentResolver: void registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver) uri: content://com.android.browser/history
+  10m 17s  120 <reset>                                                      TId:  990 java.net.Socket: void <init>
+  11m 28s  137 unlabeled                                                    TId:    1 android.telephony.TelephonyManager: java.lang.String getLine1Number()
+  17m 49s  211 background                                                   TId: 1022 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://com.android.chrome.browser/bookmarks
+  28m 37s  342 background                                                   TId: 1092 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.android.browser/bookmarks
+  28m 43s  343 <reset>                                                      TId: 1093 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.android.browser/history
+  28m 43s  343 <reset>                                                      TId: 1094 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://sms
+  28m 44s  343 <reset>                                                      TId: 1094 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://logs/historys
+  28m 44s  343 <reset>                                                      TId: 1094 android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal) uri: content://logs/historys
+  28m 44s  343 <reset>                                                      TId: 1094 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://sms/inbox
+  28m 45s  343 <reset>                                                      TId: 1094 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://sms/sent
+  28m 45s  343 <reset>                                                      TId: 1094 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://mms/inbox
+  28m 45s  343 <reset>                                                      TId: 1094 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://mms
+  28m 45s  343 <reset>                                                      TId: 1094 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://mms-sms
+  28m 45s  343 <reset>                                                      TId: 1094 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://mms/address
+  28m 45s  343 <reset>                                                      TId: 1094 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://mms/part
+  28m 45s  343 <reset>                                                      TId: 1094 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://mms/sent
+  28m 45s  343 <reset>                                                      TId: 1094 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://mms/outbox
+  28m 45s  343 <reset>                                                      TId: 1095 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://call_log/calls
+  28m 45s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.android.contacts/contacts
+  28m 45s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.android.contacts/data
+  28m 45s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.android.contacts/raw_contact_entities
+  28m 45s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.android.contacts/emails
+  28m 45s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.android.contacts/postals
+  28m 45s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.android.contacts/groups
+  28m 45s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.android.contacts/groups_summary
+  28m 45s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/people
+  28m 45s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/phones
+  28m 46s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/photos
+  28m 46s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/calls
+  28m 46s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/
+  28m 46s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/settings
+  28m 46s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/deleted_people
+  28m 46s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/people/with_email_or_im_filter
+  28m 46s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/groups
+  28m 46s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/deleted_groups
+  28m 46s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/groupmembership
+  28m 46s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/groupmembershipraw
+  28m 46s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/contact_methods
+  28m 46s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/contact_methods/email
+  28m 46s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/presence
+  28m 46s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/organizations
+  28m 49s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://contacts/extensions
+  28m 49s  343 <reset>                                                      TId: 1096 android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[]) uri: content://com.android.contacts/raw_contacts
+
+

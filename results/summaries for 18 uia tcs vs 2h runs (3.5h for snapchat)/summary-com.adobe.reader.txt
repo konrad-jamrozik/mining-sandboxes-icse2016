@@ -1,0 +1,60 @@
+==============================================================
+use-case:viewDocument:com.adobe.reader
+==============================================================
+
+// Manually-written description of the actions of the use case:
+//
+//  1. Reset the app by calling Package Manager through adb (Android Debug Bridge).
+//  2. Click the 'What's New' button.
+//  3. Click the 'Help' button to open side menu.
+//  4. Click the 'Documents' tab in the side menu.
+//  5. Click the first (topmost) document to open it.
+//  6. Terminate the exploration.
+
+Total run time:         0m 17s
+Total actions count:    6 (including the final action terminating exploration)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 0
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     | Use case       API signature
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 0
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     | Use case       Event                                                        API signature
+
+
+==============================================================
+droidmate-run:com.adobe.reader
+==============================================================
+
+Total run time:       120m 19s
+Total actions count: 2576 (including the final action terminating exploration)
+Total resets count:    96 (including the initial action)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 1
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     API signature
+   8m 57s  191 TId:  702 java.net.Socket: void <init>
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 1
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     Event                                                        API signature
+   8m 57s  191 background                                                   TId:  702 java.net.Socket: void <init>
+
+

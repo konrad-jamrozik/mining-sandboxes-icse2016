@@ -1,0 +1,87 @@
+==============================================================
+use-case:killTask:com.estrongs.android.taskmanager
+==============================================================
+
+// Manually-written description of the actions of the use case:
+//
+//  1. Reset the app by calling Package Manager through adb (Android Debug Bridge).
+//  2. Click the 'OK' button to close the 'what's new in current version' pop-up
+//  3. Click the tab with 'Kill All' label to access the menu for selecting tasks to kill.
+//  4. Click the 'X' circle button at the first task on the list to kill the task.
+//  5. Terminate the exploration.
+
+Total run time:         0m 11s
+Total actions count:    5 (including the final action terminating exploration)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 2
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     | Use case       API signature
+   0m  3s    1 |    0m  3s    2 TId: 2440 java.net.URL: java.net.URLConnection openConnection()
+   0m  9s    2 |    0m  3s    2 TId: 2440 java.net.Socket: void <init>
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 2
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] in droidmate run for the first time, if any> <index of action that triggered the call, if any> | <time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     | Use case       Event                                                        API signature
+   5m 53s   99 |    0m  3s    2 background                                                   TId: 2440 java.net.URL: java.net.URLConnection openConnection()
+   0m  9s    2 |    0m  3s    2 background                                                   TId: 2440 java.net.Socket: void <init>
+
+
+==============================================================
+droidmate-run:com.estrongs.android.taskmanager
+==============================================================
+
+Total run time:       120m 17s
+Total actions count: 2052 (including the final action terminating exploration)
+Total resets count:   130 (including the initial action)
+
+--------------------------------------------------------------
+Unique API calls count observed in the run: 5
+
+Below follows a list of first calls to unique APIs. It is to be read as follows:
+<time of logging the unique API for the first time> <index of action that triggered the call> <the API call data>
+
+ droidmate     API signature
+   0m  3s    1 TId: 3656 java.net.URL: java.net.URLConnection openConnection()
+   0m  9s    2 TId: 3656 java.net.Socket: void <init>
+   1m 10s   13 TId: 3652 android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)
+   3m 42s   54 TId:    1 android.telephony.TelephonyManager: java.lang.String getDeviceId()
+   3m 42s   54 TId:    1 android.telephony.TelephonyManager: void listen(android.telephony.PhoneStateListener,int)
+
+--------------------------------------------------------------
+Unique [API call, event] pairs count observed in the run: 21
+
+Below follows a list of first calls to unique [API call, event] pairs. It is to be read as follows:
+<time of logging the unique API call from the unique [API call, event] for the first time> <index of action that triggered the call> <the event data> <the API call data>
+
+ droidmate     Event                                                        API signature
+   0m  3s    1 <reset>                                                      TId: 3656 java.net.URL: java.net.URLConnection openConnection()
+   0m  9s    2 background                                                   TId: 3656 java.net.Socket: void <init>
+   1m 10s   13 background                                                   TId: 3652 android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)
+   3m 42s   54 click:[res:id/content_power_optim]                           TId:    1 android.telephony.TelephonyManager: java.lang.String getDeviceId()
+   3m 42s   54 click:[res:id/content_power_optim]                           TId:    1 android.telephony.TelephonyManager: void listen(android.telephony.PhoneStateListener,int)
+   4m 24s   71 click:[res:android:id/button1]                               TId:    1 android.telephony.TelephonyManager: void listen(android.telephony.PhoneStateListener,int)
+   4m 37s   72 <reset>                                                      TId:    1 android.telephony.TelephonyManager: java.lang.String getDeviceId()
+   4m 37s   72 <reset>                                                      TId:    1 android.telephony.TelephonyManager: void listen(android.telephony.PhoneStateListener,int)
+   5m 11s   85 unlabeled                                                    TId:    1 android.telephony.TelephonyManager: void listen(android.telephony.PhoneStateListener,int)
+   5m 53s   99 background                                                   TId: 3731 java.net.URL: java.net.URLConnection openConnection()
+   7m 46s  134 click:[res:id/btn_startup_optim]                             TId:    1 android.telephony.TelephonyManager: void listen(android.telephony.PhoneStateListener,int)
+   8m  0s  135 click:[res:id/content_startup]                               TId:    1 android.telephony.TelephonyManager: void listen(android.telephony.PhoneStateListener,int)
+   8m 23s  140 click:[res:id/item_button]                                   TId:    1 android.telephony.TelephonyManager: void listen(android.telephony.PhoneStateListener,int)
+  21m  2s  357 unlabeled                                                    TId:    1 android.telephony.TelephonyManager: java.lang.String getDeviceId()
+  68m  3s 1160 <reset>                                                      TId: 4181 android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)
+  77m 38s 1313 click:[res:android:id/select_dialog_listview]                TId:    1 android.telephony.TelephonyManager: void listen(android.telephony.PhoneStateListener,int)
+  80m  2s 1354 click:[res:id/menu_list_item]                                TId:    1 android.telephony.TelephonyManager: void listen(android.telephony.PhoneStateListener,int)
+  81m 59s 1385 click:[res:android:id/text1]                                 TId:    1 android.telephony.TelephonyManager: void listen(android.telephony.PhoneStateListener,int)
+  84m 21s 1425 click:[res:id/kill]                                          TId:    1 android.telephony.TelephonyManager: void listen(android.telephony.PhoneStateListener,int)
+  94m 40s 1620 click:[res:id/choose_time_view]                              TId:    1 android.telephony.TelephonyManager: java.lang.String getDeviceId()
+  94m 40s 1620 click:[res:id/choose_time_view]                              TId:    1 android.telephony.TelephonyManager: void listen(android.telephony.PhoneStateListener,int)
+
+
