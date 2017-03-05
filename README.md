@@ -30,7 +30,7 @@ The data is interpretation of the last two tables (starting at lines 96 and 115)
 
 ### Figure 5 data
 
-The charts have been generated from files in the [saturation charts data 12 apps 2h](results/saturation charts data 12 apps 2h) directory.
+The charts were generated from files in the [saturation charts data 12 apps 2h](results/saturation charts data 12 apps 2h) directory.
 
 ### Figure 7 data
 
@@ -38,4 +38,8 @@ The chart was generated from the file [saturation_chart-3.5h-perEvent-com.snapch
 
 ### Figure 8 data
 
-The charts have been generated from files in the [saturation charts data 12 apps 2h per event](results/saturation charts data 12 apps 2h per event) directory.
+The charts were generated from files in the [saturation charts data 12 apps 2h per event](results/saturation charts data 12 apps 2h per event) directory.
+
+### Figure 9 data
+
+The chart was generated from the file [saturation_chart-3.5h-com.snapchat.android.txt](results/saturation charts data snapchat 4.1.07 vs 5.0.34.6 3.5h/saturation_chart-3.5h-com.snapchat.android.txt), all columns. The red line, i.e. snapchat 5.0.34.6, is based on first and second column. The blue line, i.e. snapchat 4.1.07, is based on first and third column. Note that the blue line is equivalent to the blue line on Figure 2.
