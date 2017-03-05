@@ -54,4 +54,4 @@ The chart was generated from the file [saturation_chart-3.5h-com.snapchat.androi
 
 ### Section 6 detailed analysis
 
-The detailed analysis of API calls difference between Snapchat 4.1.07 and Snapchat 5.0.34.6 done in section 6. ASSESSING SANDBOXES is done based on the data given in [summary-com.snapchat.android.txt](results/summaries for snapchat 4.1.07 vs 5.0.34.6 comparison/summary-com.snapchat.android.txt). The same kind of manual interpretation procedure has been applied as in case of [Figure 3 data](#figure-3-data). 
+The detailed analysis of API calls difference between Snapchat 4.1.07 and Snapchat 5.0.34.6 done in section _6. ASSESSING SANDBOXES_ is done based on the data given in [summary-com.snapchat.android.txt](results/summaries for snapchat 4.1.07 vs 5.0.34.6 comparison/summary-com.snapchat.android.txt). The same kind of manual interpretation procedure has been applied as in case of [Figure 3 data](#figure-3-data). 
