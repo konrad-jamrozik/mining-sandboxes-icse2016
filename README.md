@@ -58,4 +58,4 @@ The detailed analysis of API calls difference between Snapchat 4.1.07 and Snapch
 
 ## Reproducing publication data
 
-Please see (howto_reproduce.md)[howto_reproduce.md]
+Please see [howto_reproduce.md](howto_reproduce.md)
