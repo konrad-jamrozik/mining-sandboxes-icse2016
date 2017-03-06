@@ -1,4 +1,5 @@
-Author: Konrad Jamrozik jamrozik@st.cs.uni-saarland.de
+Author: Konrad Jamrozik  
+jamrozik@st.cs.uni-saarland.de  
 Last updated on: 5 Mar 2017
 
 The reproduction has to happen with DroidMate version as of `12 Aug 2015`. It is located in a `.zip` file in `<this_repo_root>/experiments_input_data`
