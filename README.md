@@ -1,7 +1,3 @@
-Author: Konrad Jamrozik  
-jamrozik@st.cs.uni-saarland.de  
-Last updated on: 5 Mar 2017
-
 # Data for the ICSE 2016 "Mining Sandboxes" publication
 
 A repository containing input and output data from the ICSE 2016 "Mining Sandboxes" paper, as well as instructions on how to reproduce the results as faithfully as possible.
