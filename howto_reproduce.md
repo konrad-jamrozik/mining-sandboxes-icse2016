@@ -1,7 +1,7 @@
 Author: Konrad Jamrozik jamrozik@st.cs.uni-saarland.de
 Last updated on: 5 Mar 2017
 
-The reproduction has to happen with DroidMate version as of `12 Aug 2015`. Please see `README.md` for a link to the repository from which you should check out appropriate commit.
+The reproduction has to happen with DroidMate version as of `12 Aug 2015`. It is located in a `.zip` file in `<this_repo_root>/experiments_input_data`
 
 For all the reproduction efforts please use `Nexus 7` with Android `4.4.2`.
 The recommended way of reproducing is to reproduce the IntelliJ configuration that was used to originally run the experiments. The details are given below.
@@ -110,6 +110,6 @@ For comparison with your efforts. You can find the same dump in the "logs" subdi
     
 # Step 2: obtaining the `.ser` files from DroidMate runs.
 
-Now we will try to reproduce the `.ser` files which we used as input in step 1. It won't be precise reproduction, see the remarks on top of this file. For that, you will have to inline the apk files located in `experiments_input_data/apks` and put their inlined versions in `<working_directory>\apks`. For both these operations you should have IntelliJ configurations available in the commit you had to check out, as described at the beginning of this file.
+Now we will try to reproduce the `.ser` files which we used as input in step 1. It won't be precise reproduction, see the remarks on top of this file. For that, you will have to inline the apk files located in `experiments_input_data/apks` and put their inlined versions in `<working_directory>\apks`. For both these operations you should have IntelliJ configurations available in DroidMate version you have to use, as described at the beginning of this file. That DroidMate version is old, but already uses Gradle for buidling, so this is how you can get it up and running. There should be a specific Gradle task for apk inlining in one of the projects. If not, inlining can be done from IntelliJ run as in the current DroidMate version.
 	
 Questions? Problems? Need to reproduce something else? Write to me.
