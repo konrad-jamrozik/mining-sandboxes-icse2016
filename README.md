@@ -7,7 +7,7 @@ Note: this repository **does not contain tool source code**, only data. To get s
 Contact: jamrozik@st.cs.uni-saarland.de
 
 Useful links:
-* [Download the "Mining Sandboxes" publication](http://www.boxmate.org/files/boxmate-preprint.pdf)
+* [Download the "Mining Sandboxes" publication](http://www.boxmate.org/files/boxmate-camera-ready.pdf)
 * ["Mining Sandboxes" at the ACM Digital Library](http://dl.acm.org/citation.cfm?id=2884782)
 * [Website of the tool used in the publication, BoxMate](http://www.boxmate.org)
 * [GitHub repository with source code of BoxMate](https://github.com/konrad-jamrozik/droidmate)
